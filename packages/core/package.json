@@ -1,6 +1,6 @@
 {
   "name": "@prisma-query/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Prisma equivalent of mongoose-paginate-v2 — parse, validate, and transform HTTP query parameters into Prisma-ready objects",
   "repository": {
     "type": "git",
