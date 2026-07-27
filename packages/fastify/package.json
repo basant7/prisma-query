@@ -31,7 +31,7 @@
       }
     }
   },
-  "files": ["dist"],
+  "files": ["dist", "README.md"],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
