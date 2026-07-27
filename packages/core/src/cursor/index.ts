@@ -11,7 +11,9 @@ export function parseCursorPagination(
   if (!cursor) return undefined;
 
   const maxLimit = defaults?.maxLimit ?? MAX_CURSOR_LIMIT;
-  const rawLimit = Math.floor(Number(params['limit']) || (defaults?.limit ?? DEFAULT_CURSOR_LIMIT));
+  const rawLimit = Math.floor(
+    Number(params['limit']) || (defaults?.limit ?? DEFAULT_CURSOR_LIMIT),
+  );
   const take = Math.min(Math.max(1, rawLimit), maxLimit);
 
   return { cursor, take };

@@ -1,8 +1,4 @@
-import type {
-  HttpRequest,
-  ParsedQuery,
-  QueryConfig,
-} from './types';
+import type { HttpRequest, ParsedQuery, QueryConfig } from './types';
 import { extractQueryParams } from './parser';
 import { parseFilters } from './filters';
 import { parseSearch } from './search';

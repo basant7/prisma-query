@@ -45,8 +45,10 @@ export function parseFilters(
       if (!filters[key]) {
         filters[key] = {};
       }
-      (filters[key] as Record<string, unknown>)['equals'] =
-        parseFilterValue('equals', value);
+      (filters[key] as Record<string, unknown>)['equals'] = parseFilterValue(
+        'equals',
+        value,
+      );
     }
   }
 
@@ -74,7 +76,9 @@ function parseFilterValue(
   return value;
 }
 
-export function buildPrismaFilters(filters: ParsedFilters): Record<string, unknown> {
+export function buildPrismaFilters(
+  filters: ParsedFilters,
+): Record<string, unknown> {
   const where: Record<string, unknown> = {};
 
   for (const [field, conditions] of Object.entries(filters)) {

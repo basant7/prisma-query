@@ -1,8 +1,4 @@
-import type {
-  ParsedQuery,
-  QueryConfig,
-  SortDirection,
-} from './types';
+import type { ParsedQuery, QueryConfig, SortDirection } from './types';
 import { buildPrismaFilters } from './filters';
 import { buildPrismaSearch } from './search';
 import { buildPrismaSort } from './sort';

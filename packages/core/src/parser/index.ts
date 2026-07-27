@@ -4,8 +4,14 @@ export function extractQueryParams(req: HttpRequest): Record<string, string> {
   const params: Record<string, string> = {};
 
   if (req.query) {
-    if (typeof (req.query as Record<string, unknown>)['forEach'] === 'function') {
-      (req.query as { forEach: (cb: (value: string, key: string) => void) => void }).forEach((value: string, key: string) => {
+    if (
+      typeof (req.query as Record<string, unknown>)['forEach'] === 'function'
+    ) {
+      (
+        req.query as {
+          forEach: (cb: (value: string, key: string) => void) => void;
+        }
+      ).forEach((value: string, key: string) => {
         params[key] = value;
       });
     } else {

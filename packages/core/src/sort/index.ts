@@ -57,6 +57,8 @@ export function parseSort(
   return result;
 }
 
-export function buildPrismaSort(sort: ParsedSort[]): Record<string, SortDirection>[] {
+export function buildPrismaSort(
+  sort: ParsedSort[],
+): Record<string, SortDirection>[] {
   return sort.map((s) => ({ [s.field]: s.direction }));
 }

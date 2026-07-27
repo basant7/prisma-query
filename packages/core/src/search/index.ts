@@ -17,7 +17,9 @@ export function parseSearch(
   };
 }
 
-export function buildPrismaSearch(search: ParsedSearch): Record<string, unknown> {
+export function buildPrismaSearch(
+  search: ParsedSearch,
+): Record<string, unknown> {
   if (!search || search.OR.length === 0) return {};
 
   if (search.OR.length === 1) {

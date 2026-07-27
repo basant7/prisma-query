@@ -133,10 +133,7 @@ export interface HttpRequest {
 }
 
 export type RawQueryValue =
-  | string
-  | string[]
-  | Record<string, unknown>
-  | undefined;
+  string | string[] | Record<string, unknown> | undefined;
 
 export interface RawQuery {
   [key: string]: RawQueryValue;
